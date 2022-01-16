@@ -1,10 +1,10 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react'
-import App from './App';
+import App, { calcularNovoSaldo } from './App';
 
 describe('Componente principal', () => {
     describe('Quando eu abro o app do banco', () => {
-        test('o nome é exibido', () => {
+        it('o nome é exibido', () => {
             render(<App />);
             expect(screen.getByText('ByteBank')).toBeInTheDocument();
         })
